@@ -218,7 +218,7 @@ function getCustomIconPath(iconCode) {
   const fileName = iconMap[iconCode] || "sun";
 
   // 파일 경로 반환
-  return `/weather-icons/${fileName}.png`;
+  return `./weather-icons/${fileName}.png`;
 }
 
 // ========================================
@@ -353,7 +353,7 @@ function render(data) {
       // this: 현재 img 태그를 의미
       // 커스텀 PNG 파일이 없으면 OpenWeatherMap의 기본 아이콘 사용
       // @2x: 2배 크기의 아이콘 (더 선명함)
-      this.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+      this.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
       // 콘솔에 에러 메시지 출력
       console.log(`커스텀 아이콘 없음: ${icon}, 기본 아이콘으로 대체`);
